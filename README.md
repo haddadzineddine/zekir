@@ -4,8 +4,8 @@ Hisn Al-Muslim is an extension that aims to increase your hasanat insha'Allah by
 
 ## Extension Settings
 
-- `zekir.interval`: Choose the time interval (in mins) 'eg. 30 mins'.
-- `zekir.notificationType`: Choose whether the notification pops up in the middle or shows silently on the side.
+- `hisn-al-muslim.interval`: Choose the time interval (in mins) 'eg. 30 mins'.
+- `hisn-al-muslim.notificationType`: Choose whether the notification pops up in the middle or shows silently on the side.
 
 ## Extension Functions
 
