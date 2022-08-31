@@ -1,13 +1,38 @@
 import * as vscode from 'vscode';
 import axios from 'axios';
 
-type ZekirResponse = {
+interface ZekrResponse {
 	content: string;
 	description: string;
 	reference: string;
 	count: string;
 	category: string;
 };
+
+const getRandomZekr = async () => {
+	const response = await axios.get('https://azkar-api.nawafhq.repl.co/zekr?t&json');
+	const zekr = response.data as ZekrResponse;
+
+	return zekr;
+};
+
+const showNotification = async (notificationType: 'side' | 'modal') => {
+
+	const zekr = await getRandomZekr();
+
+	if (notificationType === 'side') {
+		vscode.window.showInformationMessage(zekr.content);
+	}
+
+	if (notificationType === 'modal') {
+		vscode.window.showInformationMessage(zekr.content,
+			{
+				modal: true,
+				detail: zekr.description
+			});
+	}
+};
+
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -18,22 +43,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const azkarCommand = vscode.commands.registerCommand('zekir.azkar', async () => {
 
+		showNotification(notificationType);
+
 		setInterval(async () => {
-			const response = await axios.get('https://azkar-api.nawafhq.repl.co/zekr?t&json');
-			const zekir = response.data as ZekirResponse;
-
-			if (notificationType === 'side') {
-				vscode.window.showInformationMessage(zekir.content);
-			}
-
-			if (notificationType === 'modal') {
-				vscode.window.showInformationMessage(zekir.content,
-					{
-						modal: true,
-						detail: zekir.description
-					});
-			}
-
+			showNotification(notificationType);
 		}, intervalInSec);
 
 	});

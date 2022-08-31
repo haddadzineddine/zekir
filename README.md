@@ -1,4 +1,4 @@
-# <img src="./beads.png" width="25" height="25"> Hisn Al-Muslim v1.0.0
+# <img src="./beads.png" width="25" height="25"> Hisn Al-Muslim v1.0.3
 
 Hisn Al-Muslim is an extension that aims to increase your hasanat insha'Allah by reminding you to say Azkar every now and then, based on an interval that you choose.
 
