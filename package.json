@@ -3,7 +3,7 @@
   "displayName": "Hisn Al-Muslim",
   "description": "hisn al muslim ",
   "publisher": "HaddadZineddine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -24,14 +24,14 @@
     ],
     "configuration": [
       {
-        "title": "Zekir",
+        "title": "Hisn Al-Muslim",
         "properties": {
-          "zekir.interval": {
+          "hisn-al-muslim.interval": {
             "type": "integer",
             "default": 30,
             "description": "The interval between each Azkar in minutes"
           },
-          "fazakir.notificationType": {
+          "hisn-al-muslim.notificationType": {
             "type": "string",
             "default": "side",
             "enum": [

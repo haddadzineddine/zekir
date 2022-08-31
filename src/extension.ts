@@ -11,7 +11,7 @@ type ZekirResponse = {
 
 export function activate(context: vscode.ExtensionContext) {
 
-	const config = vscode.workspace.getConfiguration('zekir');
+	const config = vscode.workspace.getConfiguration('hisn-al-muslim');
 	const intervalInSec: number = (config.get('interval', 30) as number) * 60 * 1000;
 	const notificationType = config.get('notificationType', 'side') as 'side' | 'modal';
 
