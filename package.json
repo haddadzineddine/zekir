@@ -1,6 +1,6 @@
 {
   "name": "hisn-al-muslim",
-  "displayName": "hisn al-muslim",
+  "displayName": "Hisn Al-Muslim",
   "description": "hisn al muslim ",
   "publisher": "HaddadZineddine",
   "version": "1.0.0",
@@ -21,29 +21,29 @@
         "command": "zekir.azkar",
         "title": "Azkar"
       }
-    ]
-  },
-  "configuration": [
-    {
-      "title": "Zekir",
-      "properties": {
-        "zekir.interval": {
-          "type": "integer",
-          "default": 30,
-          "description": "The interval between each Azkar in minutes"
-        },
-        "fazakir.notificationType": {
-          "type": "string",
-          "default": "side",
-          "enum": [
-            "side",
-            "modal"
-          ],
-          "description": "Do you want the Azkar to show up in the middle (with sound) or on the side (silent)"
+    ],
+    "configuration": [
+      {
+        "title": "Zekir",
+        "properties": {
+          "zekir.interval": {
+            "type": "integer",
+            "default": 30,
+            "description": "The interval between each Azkar in minutes"
+          },
+          "fazakir.notificationType": {
+            "type": "string",
+            "default": "side",
+            "enum": [
+              "side",
+              "modal"
+            ],
+            "description": "Do you want the Azkar to show up in the middle (with sound) or on the side (silent)"
+          }
         }
       }
-    }
-  ],
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
